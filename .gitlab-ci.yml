@@ -12,11 +12,11 @@ build-admin:
   stage: build
   script:
     - cd admin
-    - npm install
+    - npm install --legacy-peer-deps
     - npm run build
 
 build-frontend:
   stage: build
   script:
     - cd frontend
-    - npm install
+    - npm install --legacy-peer-deps

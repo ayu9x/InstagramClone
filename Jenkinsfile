@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir('admin') {
                     echo 'Installing Admin Dependencies'
-                    sh 'npm install'
+                    sh 'npm install --legacy-peer-deps'
                     
                     echo 'Building Admin Application'
                     sh 'npm run build'
@@ -18,7 +18,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo 'Installing Frontend Dependencies'
-                    sh 'npm install'
+                    sh 'npm install --legacy-peer-deps'
                 }
             }
         }
