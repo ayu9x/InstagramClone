@@ -1,0 +1,11 @@
+{
+  "name": "backend-functions",
+  "description": "Firebase backend cloud functions",
+  "dependencies": {
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.0"
+  },
+  "engines": {
+    "node": "16"
+  }
+}

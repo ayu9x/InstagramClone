@@ -77,7 +77,7 @@ As part of my continuous learning and DevOps practice, I have extended this orig
 - **GitHub Actions Integration:** Created a `.github/workflows/main.yml` file to execute build jobs automatically upon new commits.
 - **GitLab CI Configuration:** Added an optimized `.gitlab-ci.yml` featuring `node_modules/` caching for accelerated job runs.
 - **Bitbucket Pipelines:** Added `bitbucket-pipelines.yml` to automatically execute build pipelines in Atlassian environments.
-- **Jenkins Automation:** Formulated a Declarative `Jenkinsfile` for seamless server automation using standard pipeline stages.
+- **Docker Orchestration & Observability:** Engineered a complete full-stack `docker-compose` ecosystem wrapping the `frontend` (Expo Web Server), `admin` (React Web Server) and `backend` (Firebase Emulators) in native Docker containers alongside Grafana and Prometheus for extensive metrics visualization.
 
 ## 🆕 Getting Started
 

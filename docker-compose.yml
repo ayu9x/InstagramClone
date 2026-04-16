@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  admin-app:
+    build: 
+      context: ./admin
+    container_name: admin_nginx
+    ports:
+      - '8080:80'
+    networks:
+      - monitoring
+
+  frontend-app:
+    build: 
+      context: ./frontend
+    container_name: frontend_nginx
+    ports:
+      - '8081:80'
+    networks:
+      - monitoring
+
+  firebase-backend:
+    build:
+      context: ./backend
+    container_name: firebase_backend
+    ports:
+      - '4000:4000' # Firebase UI
+      - '5001:5001' # Functions API
+      - '8082:8082' # Firestore Data
+    networks:
+      - monitoring
+
+  nginx-exporter:
+    image: nginx/nginx-prometheus-exporter:latest
+    container_name: nginx_exporter
+    command:
+      - -nginx.scrape-uri=http://admin-app/stub_status
+    ports:
+      - '9113:9113'
+    networks:
+      - monitoring
+    depends_on:
+      - admin-app
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - '9090:9090'
+    networks:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - '3001:3000'
+    networks:
+      - monitoring
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+
+networks:
+  monitoring:
+    driver: bridge
