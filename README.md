@@ -76,6 +76,7 @@ As part of my continuous learning and DevOps practice, I have extended this orig
 - **Pipeline Architecture:** Designed and implemented multi-platform CI pipelines to automatically test and build the `frontend` and `admin` environments.
 - **GitHub Actions Integration:** Created a `.github/workflows/main.yml` file to execute build jobs automatically upon new commits.
 - **GitLab CI Configuration:** Added an optimized `.gitlab-ci.yml` featuring `node_modules/` caching for accelerated job runs.
+- **Bitbucket Pipelines:** Added `bitbucket-pipelines.yml` to automatically execute build pipelines in Atlassian environments.
 - **Jenkins Automation:** Formulated a Declarative `Jenkinsfile` for seamless server automation using standard pipeline stages.
 
 ## 🆕 Getting Started
@@ -97,6 +98,7 @@ As part of my continuous learning and DevOps practice, I have extended this orig
 This repository includes pre-configured CI/CD pipelines to automatically build the `admin` and `frontend` applications:
 - **GitHub Actions**: Configured via `.github/workflows/main.yml`.
 - **GitLab CI**: Configured via `.gitlab-ci.yml`.
+- **Bitbucket**: Configured via `bitbucket-pipelines.yml`.
 - **Jenkins**: Configured via `Jenkinsfile`.
 
 ## 🚧 Roadmap
