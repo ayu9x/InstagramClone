@@ -1,0 +1,22 @@
+image: node:16
+
+cache:
+  paths:
+    - admin/node_modules/
+    - frontend/node_modules/
+
+stages:
+  - build
+
+build-admin:
+  stage: build
+  script:
+    - cd admin
+    - npm install
+    - npm run build
+
+build-frontend:
+  stage: build
+  script:
+    - cd frontend
+    - npm install

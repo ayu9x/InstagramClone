@@ -68,6 +68,16 @@ In the [master](https://github.com/SimCoderYoutube/InstagramClone/tree/master) b
 
 You can follow the youtube series in the following [link](https://www.youtube.com/watch?v=xE8UEX7vXVQ&list=PLxabZQCAe5fgatwOQny9wKJVs4YD6xkf1)
 
+## 🛠️ My Enhancements
+
+As part of my continuous learning and DevOps practice, I have extended this original project by integrating robust Continuous Integration (CI) and deployment concepts. 
+
+**My specific contributions to this fork include:**
+- **Pipeline Architecture:** Designed and implemented multi-platform CI pipelines to automatically test and build the `frontend` and `admin` environments.
+- **GitHub Actions Integration:** Created a `.github/workflows/main.yml` file to execute build jobs automatically upon new commits.
+- **GitLab CI Configuration:** Added an optimized `.gitlab-ci.yml` featuring `node_modules/` caching for accelerated job runs.
+- **Jenkins Automation:** Formulated a Declarative `Jenkinsfile` for seamless server automation using standard pipeline stages.
+
 ## 🆕 Getting Started
 
 - ### **Prerequisites**
@@ -81,6 +91,13 @@ You can follow the youtube series in the following [link](https://www.youtube.co
 - ### **Installation**
 
   In order to deploy the project you'll need to follow the [wiki page](https://github.com/SimCoderYoutube/InstagramClone/wiki/Setup-your-project) dedicated to this effect.
+
+## 🚀 CI/CD Integrations
+
+This repository includes pre-configured CI/CD pipelines to automatically build the `admin` and `frontend` applications:
+- **GitHub Actions**: Configured via `.github/workflows/main.yml`.
+- **GitLab CI**: Configured via `.gitlab-ci.yml`.
+- **Jenkins**: Configured via `Jenkinsfile`.
 
 ## 🚧 Roadmap
 
@@ -108,9 +125,11 @@ This project is [Apache License 2.0](https://github.com/SimCoderYoutube/Instagra
 
 ## 👤 Contact
 
-**SimCoder**
+**Ayush Raj**
 
-- Website: www.simcoder.com
-- Twitter: [@simcoder_here](https://twitter.com/simcoder_here)
-- Github: [@simcoderYoutube](https://github.com/simcoderYoutube)
-- Youtube: [SimCoder](https://www.youtube.com/channel/UCQ5xY26cw5Noh6poIE-VBog)
+- Github: [@ayu9x](https://github.com/ayu9x)
+- GitLab: [@ayu9x](https://gitlab.com/ayu9x)
+- LinkedIn: [Ayush Raj](https://www.linkedin.com/in/ayush-raj-a11b82219/)
+
+**Original Project Creator:**
+- SimCoder: [Youtube](https://www.youtube.com/channel/UCQ5xY26cw5Noh6poIE-VBog) | [Github](https://github.com/simcoderYoutube)
